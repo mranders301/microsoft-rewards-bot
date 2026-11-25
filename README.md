@@ -1,35 +1,29 @@
-# Microsoft Rewards Script
+# Microsoft Rewards Bot
 
-A small TypeScript project for automating Microsoft Rewards activities in a browser. This is a fork of [TheNetsky/Microsoft-Rewards-Script](https://github.com/TheNetsky/Microsoft-Rewards-Script), with Discord integration and the separate website removed.
+A browser automation project for Microsoft Rewards, built with TypeScript.
 
-## Video
+[Watch the full recording](docs/showcase-redacted.mp4) · [Installation](#installation) · [FAQ](#faq)
 
-![Animated preview of the showcase](docs/showcase.gif)
+![Short clip of an earlier version](docs/showcase.gif)
 
-[Watch the full video](docs/showcase-redacted.mp4)
-
-This recording is from an earlier version. It's cropped and blurred to hide account details, and the audio has been removed. It doesn't show this build.
+*This clip shows an earlier version. Account details have been cropped out. The current build has not been tested on a live account.*
 
 ## What it does
 
-The script is designed to:
+- Runs desktop and mobile Bing searches.
+- Tries daily tasks and other available activities.
+- Shows progress in the terminal.
+- Lets you choose which activities to run.
 
-- Run Bing searches on desktop and mobile.
-- Try daily tasks and other available Rewards activities.
-- Show progress in the terminal.
-- Use settings from a config file.
+Activities depend on your account and region. Microsoft can change them at any time.
 
-Some activities may not be available on every account, and Microsoft can change how they work. This version has not been tested with a live account.
+> **Account risk:** Microsoft does not allow automated searches for Rewards points. Searches may earn nothing, and accounts can be restricted. [Microsoft's rules](https://support.microsoft.com/en-us/accounts-billing/rewards/limiting-your-searches-in-microsoft-rewards).
 
-## How many points?
+## Installation
 
-There is no guaranteed amount. Available points and daily limits depend on your country, account and current offers. See [Microsoft's points guide](https://support.microsoft.com/en-us/accounts-billing/rewards/how-to-earn-microsoft-rewards-points).
+**1. Install [Node.js 24 or newer](https://nodejs.org/).**
 
-**Automated searches are against Microsoft's rules.** They may earn no points and can lead to account restrictions or lost points.
-
-## Getting started
-
-You'll need [Node.js 24 or newer](https://nodejs.org/). Open a terminal in the project folder and run:
+**2. Open a terminal in the project folder and run:**
 
 ```sh
 npm ci
@@ -37,25 +31,37 @@ npm run install:browser
 npm run build
 ```
 
-Copy `config.example.json` to `config.json`. Then create a file called `.env` in the project folder:
+**3. Set up your files.**
+
+Copy `config.example.json` and name the copy `config.json`. Create a file named `.env` in the project folder and add:
 
 ```dotenv
 ACCOUNT_1_EMAIL=your@email.com
 ACCOUNT_1_PASSWORD=your_password
 ```
 
-Start the script with:
+**4. Start the bot.**
 
 ```sh
 npm start
 ```
 
-Your `.env`, config and browser sessions are ignored by Git. Keep them private. More options are documented in the [original project](https://github.com/TheNetsky/Microsoft-Rewards-Script).
+Keep your `.env`, config and browser sessions private. They are excluded from Git. For more settings, see the [original project](https://github.com/TheNetsky/Microsoft-Rewards-Script).
 
-## About this version
+## FAQ
 
-The runnable code comes from the upstream 4.1.0 version. The files in [`recovered-source/`](recovered-source/) were found in an older Antigravity project history; they're kept for reference and aren't part of the build. The TypeScript build passes on Node 24, but this copy hasn't been tested with a live account.
+**How many points can I earn?**
 
-## License
+There is no guaranteed amount. Offers and daily limits vary by country and account. Automated searches may not earn points. [Microsoft's points guide](https://support.microsoft.com/en-us/accounts-billing/rewards/how-to-earn-microsoft-rewards-points).
 
-[GPL-3.0-or-later](LICENSE). Original project by Netsky and contributors.
+**Does the video show this exact version?**
+
+No. It shows an earlier version. This build has passed a TypeScript build, but has not been tested with a live account.
+
+**What is `recovered-source`?**
+
+It contains files recovered from an earlier project. They are kept for reference and are not part of the build.
+
+## Credits
+
+This project is based on [TheNetsky/Microsoft-Rewards-Script](https://github.com/TheNetsky/Microsoft-Rewards-Script). Licensed under [GPL-3.0-or-later](LICENSE).

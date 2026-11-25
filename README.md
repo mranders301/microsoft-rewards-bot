@@ -4,9 +4,11 @@ A browser automation project for Microsoft Rewards, built with TypeScript.
 
 [Watch the full recording](docs/showcase-redacted.mp4) · [Installation](#installation) · [FAQ](#faq)
 
-![Short clip of an earlier version](docs/showcase.gif)
+https://github.com/user-attachments/assets/acff9a66-8eeb-4218-82ae-2782e3d2e932
 
-*This clip shows an earlier version. Account details have been cropped out. The current build has not been tested on a live account.*
+
+
+*This full recording shows an earlier version. It is cropped and muted to protect account details. The current build has not been tested on a live account.*
 
 ## What it does
 
